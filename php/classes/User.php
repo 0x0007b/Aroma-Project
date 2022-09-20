@@ -31,7 +31,7 @@ class User
     return $this->email;
   }
 
-  //Статический метод добавления пользователя
+  // Статический метод добавления пользователя
   static function addUser($name, $lastname, $email, $pass)
   {
     global $mysqli;
@@ -48,7 +48,7 @@ class User
       return json_encode(["result" => "success"]);
     }
   }
-  //Статический метод авторизации пользователя
+  // Статический метод авторизации пользователя
   static function authUser($email, $pass)
   {
     global $mysqli;
@@ -67,7 +67,7 @@ class User
     }
   }
 
-  //Статический метод получения данных пользователя
+  // Статический метод получения данных пользователя
   static function getUser($userId) {
     global $mysqli;
 
@@ -76,7 +76,7 @@ class User
     return json_encode($result);
   }
 
-  //Статический метод получения всех пользователей
+  // Статический метод получения всех пользователей
   static function getUsers() {
     global $mysqli;
 
